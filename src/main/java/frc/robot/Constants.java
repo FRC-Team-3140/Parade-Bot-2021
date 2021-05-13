@@ -4,6 +4,8 @@
 
 package frc.robot;
 
+import edu.wpi.first.wpilibj.DoubleSolenoid;
+
 /** Add your docs here. */
 public interface Constants {
 
@@ -20,6 +22,14 @@ public interface Constants {
     public static final int LEFT_DRIVE_SLAVE = 3;
     public static final int RIGHT_DRIVE_MASTER = 4;
     public static final int RIGHT_DRIVE_SLAVE = 5;
+
+    // PNEUMATICS
+    public static final int SHIFTER_EXT = 0;
+    public static final int SHIFTER_RET = 7;
+
+    public final DoubleSolenoid.Value EXT = DoubleSolenoid.Value.kForward;
+    public final DoubleSolenoid.Value RET = DoubleSolenoid.Value.kReverse;
+    public final DoubleSolenoid.Value OFF = DoubleSolenoid.Value.kOff;
 
 
 }

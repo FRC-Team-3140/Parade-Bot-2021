@@ -6,11 +6,13 @@ package frc.robot;
 
 import frc.robot.commands.drivetrain.Drive;
 import frc.robot.subsystems.Drivetrain;
+import frc.robot.subsystems.Pneumatics;
 
 /** Add your docs here. */
 public class RobotContainer implements HardwareAdapter {
 
     public static Drivetrain dt = new Drivetrain();
+    public static Pneumatics pn = new Pneumatics();
 
     public RobotContainer() {
         configDefaultCommands();

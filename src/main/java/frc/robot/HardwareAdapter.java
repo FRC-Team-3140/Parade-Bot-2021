@@ -7,6 +7,7 @@ package frc.robot;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 
 import edu.wpi.first.wpilibj.Compressor;
+import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.PowerDistributionPanel;
 import frc.joystickLibs.XboxController;
 
@@ -27,4 +28,5 @@ public interface HardwareAdapter extends Constants {
 
     // PNEUMATICS
     public static final Compressor compressor = new Compressor(PCM);
+    public static final DoubleSolenoid shifter = new DoubleSolenoid(PCM, SHIFTER_EXT, SHIFTER_RET);
 }
