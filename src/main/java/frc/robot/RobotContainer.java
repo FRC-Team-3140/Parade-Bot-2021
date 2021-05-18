@@ -5,6 +5,8 @@
 package frc.robot;
 
 import frc.robot.commands.drivetrain.Drive;
+import frc.robot.commands.pneumatics.ShiftDown;
+import frc.robot.commands.pneumatics.ShiftUp;
 import frc.robot.subsystems.Drivetrain;
 import frc.robot.subsystems.Pneumatics;
 
@@ -16,10 +18,18 @@ public class RobotContainer implements HardwareAdapter {
 
     public RobotContainer() {
         configDefaultCommands();
+        configButtons();
     }
 
     public void configDefaultCommands() {
         dt.setDefaultCommand(new Drive());
+
+        new ShiftDown().schedule();
+    }
+
+    public void configButtons() {
+        xbox.leftBumper.whenPressed(new ShiftUp());
+        xbox.leftBumper.whenReleased(new ShiftDown());
     }
 
 }
