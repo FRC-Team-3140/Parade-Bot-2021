@@ -19,8 +19,8 @@ public interface Constants {
 
     // DRIVETRAIN
     public static final int LEFT_DRIVE_MASTER = 2;
-    public static final int LEFT_DRIVE_SLAVE = 3;
-    public static final int RIGHT_DRIVE_MASTER = 4;
+    public static final int LEFT_DRIVE_SLAVE = 4;
+    public static final int RIGHT_DRIVE_MASTER = 3;
     public static final int RIGHT_DRIVE_SLAVE = 5;
 
     // PNEUMATICS

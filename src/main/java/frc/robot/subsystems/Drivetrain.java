@@ -14,8 +14,8 @@ public class Drivetrain extends SubsystemBase implements HardwareAdapter {
   }
 
   public void arcadeDrive(double y, double x) {
-    leftDriveMaster.set(y+x);
-    rightDriveMaster.set(y-x);
+    leftDriveMaster.set(y-x);
+    rightDriveMaster.set(y+x);
   }
 
   public void tankDrive(double left, double right) {
@@ -26,8 +26,8 @@ public class Drivetrain extends SubsystemBase implements HardwareAdapter {
   private void setInverts() {
     leftDriveMaster.setInverted(false);
     leftDriveSlave.setInverted(false);
-    rightDriveMaster.setInverted(false);
-    rightDriveSlave.setInverted(false);
+    rightDriveMaster.setInverted(true);
+    rightDriveSlave.setInverted(true);
   }
 
   private void setSlaves() {
