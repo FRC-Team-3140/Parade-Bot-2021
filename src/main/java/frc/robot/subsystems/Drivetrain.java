@@ -4,6 +4,8 @@
 
 package frc.robot.subsystems;
 
+import com.ctre.phoenix.motorcontrol.NeutralMode;
+
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.HardwareAdapter;
 
@@ -11,6 +13,7 @@ public class Drivetrain extends SubsystemBase implements HardwareAdapter {
   public Drivetrain() {
     setInverts();
     setSlaves();
+    setBrakeMode(true);
   }
 
   public void arcadeDrive(double y, double x) {
@@ -26,13 +29,38 @@ public class Drivetrain extends SubsystemBase implements HardwareAdapter {
   private void setInverts() {
     leftDriveMaster.setInverted(false);
     leftDriveSlave.setInverted(false);
+    leftDriveSlave2.setInverted(false);
+
     rightDriveMaster.setInverted(true);
     rightDriveSlave.setInverted(true);
+    rightDriveSlave2.setInverted(true);
   }
 
   private void setSlaves() {
     leftDriveSlave.follow(leftDriveMaster);
+    leftDriveSlave2.follow(leftDriveMaster);
+
     rightDriveSlave.follow(rightDriveMaster);
+    rightDriveSlave2.follow(rightDriveMaster);
+  }
+
+  private void setBrakeMode(boolean brake) {
+    if(brake) {
+      leftDriveMaster.setNeutralMode(NeutralMode.Brake);
+      leftDriveSlave.setNeutralMode(NeutralMode.Brake);
+      leftDriveSlave2.setNeutralMode(NeutralMode.Brake);
+      rightDriveMaster.setNeutralMode(NeutralMode.Brake);
+      rightDriveSlave.setNeutralMode(NeutralMode.Brake);
+      rightDriveSlave2.setNeutralMode(NeutralMode.Brake);
+    }
+    else {
+      leftDriveMaster.setNeutralMode(NeutralMode.Coast);
+      leftDriveSlave.setNeutralMode(NeutralMode.Coast);
+      leftDriveSlave2.setNeutralMode(NeutralMode.Coast);
+      rightDriveMaster.setNeutralMode(NeutralMode.Coast);
+      rightDriveSlave.setNeutralMode(NeutralMode.Coast);
+      rightDriveSlave2.setNeutralMode(NeutralMode.Coast);
+    }
   }
 
   @Override

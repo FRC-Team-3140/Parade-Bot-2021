@@ -23,8 +23,10 @@ public interface HardwareAdapter extends Constants {
     // DRIVETRAIN
     public static final WPI_TalonSRX leftDriveMaster = new WPI_TalonSRX(LEFT_DRIVE_MASTER);
     public static final WPI_TalonSRX leftDriveSlave = new WPI_TalonSRX(LEFT_DRIVE_SLAVE);
+    public static final WPI_TalonSRX leftDriveSlave2 = new WPI_TalonSRX(LEFT_DRIVE_SLAVE2);
     public static final WPI_TalonSRX rightDriveMaster = new WPI_TalonSRX(RIGHT_DRIVE_MASTER);
     public static final WPI_TalonSRX rightDriveSlave = new WPI_TalonSRX(RIGHT_DRIVE_SLAVE);
+    public static final WPI_TalonSRX rightDriveSlave2 = new WPI_TalonSRX(RIGHT_DRIVE_SLAVE2);
 
     // PNEUMATICS
     public static final Compressor compressor = new Compressor(PCM);
