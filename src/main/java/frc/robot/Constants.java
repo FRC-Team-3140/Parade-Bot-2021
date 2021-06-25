@@ -19,15 +19,18 @@ public interface Constants {
 
     // DRIVETRAIN
     public static final int LEFT_DRIVE_MASTER = 2;
-    public static final int LEFT_DRIVE_SLAVE = 4;
+    public static final int LEFT_DRIVE_SLAVE = 4;    
     public static final int LEFT_DRIVE_SLAVE2 = 6;
+
     public static final int RIGHT_DRIVE_MASTER = 3;
     public static final int RIGHT_DRIVE_SLAVE = 5;
     public static final int RIGHT_DRIVE_SLAVE2 = 7;
 
+
+
     // PNEUMATICS
     public static final int SHIFTER_EXT = 0;
-    public static final int SHIFTER_RET = 1;
+    public static final int SHIFTER_RET = 7;
 
     public final DoubleSolenoid.Value EXT = DoubleSolenoid.Value.kForward;
     public final DoubleSolenoid.Value RET = DoubleSolenoid.Value.kReverse;
