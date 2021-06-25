@@ -36,7 +36,11 @@ public class Drivetrain extends SubsystemBase implements HardwareAdapter {
 
   private void setSlaves() {
     leftDriveSlave.follow(leftDriveMaster);
+    leftDriveSlave2.follow(leftDriveMaster);
+
     rightDriveSlave.follow(rightDriveMaster);
+    rightDriveSlave2.follow(rightDriveMaster);
+
   }
 
   @Override

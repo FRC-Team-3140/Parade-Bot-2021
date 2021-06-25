@@ -12,6 +12,8 @@ public interface Constants {
     // XBOX
     public static final int XBOX_PORT = 0;
     public static final double DEADBAND = 0.05;
+    public static final double SPEED_MULTIPLIER = 0.5;
+    public static final double TURN_MULTIPLIER = 0.7;
 
     // ROBOT
     public static final int PDP = 0;
@@ -26,11 +28,9 @@ public interface Constants {
     public static final int RIGHT_DRIVE_SLAVE = 5;
     public static final int RIGHT_DRIVE_SLAVE2 = 7;
 
-
-
     // PNEUMATICS
     public static final int SHIFTER_EXT = 0;
-    public static final int SHIFTER_RET = 7;
+    public static final int SHIFTER_RET = 1;
 
     public final DoubleSolenoid.Value EXT = DoubleSolenoid.Value.kForward;
     public final DoubleSolenoid.Value RET = DoubleSolenoid.Value.kReverse;

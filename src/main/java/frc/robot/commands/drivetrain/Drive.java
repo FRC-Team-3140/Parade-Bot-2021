@@ -21,7 +21,7 @@ public class Drive extends CommandBase implements HardwareAdapter{
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    RobotContainer.dt.arcadeDrive(xbox.getSmoothedMainY(),xbox.getSmoothedAltX() );
+    RobotContainer.dt.arcadeDrive(SPEED_MULTIPLIER * xbox.getSmoothedMainY(), TURN_MULTIPLIER * xbox.getSmoothedAltX() );
   }
 
   // Called once the command ends or is interrupted.
