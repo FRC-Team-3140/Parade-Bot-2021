@@ -4,6 +4,8 @@
 
 package frc.robot.subsystems;
 
+import com.ctre.phoenix.motorcontrol.NeutralMode;
+
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.HardwareAdapter;
 
@@ -11,6 +13,7 @@ public class Drivetrain extends SubsystemBase implements HardwareAdapter {
   public Drivetrain() {
     setInverts();
     setSlaves();
+    setBrakeMode();
   }
 
   public void arcadeDrive(double y, double x) {
@@ -40,6 +43,18 @@ public class Drivetrain extends SubsystemBase implements HardwareAdapter {
 
     rightDriveSlave.follow(rightDriveMaster);
     rightDriveSlave2.follow(rightDriveMaster);
+
+  }
+
+  private void setBrakeMode() {
+    leftDriveMaster.setNeutralMode(NeutralMode.Brake);
+    leftDriveSlave.setNeutralMode(NeutralMode.Brake);
+    leftDriveSlave2.setNeutralMode(NeutralMode.Brake);
+
+    rightDriveMaster.setNeutralMode(NeutralMode.Brake);
+    rightDriveSlave.setNeutralMode(NeutralMode.Brake);
+    rightDriveSlave2.setNeutralMode(NeutralMode.Brake);
+
 
   }
 
