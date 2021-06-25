@@ -24,7 +24,11 @@ public class RobotContainer implements HardwareAdapter {
     public void configDefaultCommands() {
         dt.setDefaultCommand(new Drive());
 
-        new ShiftDown().schedule();
+        // Shift Down Default on Robot Startup not working (SADGE)
+        // If the robot is in high gear upon startup just have the 
+        //  have the driver shift once to correct the issue.
+        
+        // new ShiftDown().schedule();
     }
 
     public void configButtons() {

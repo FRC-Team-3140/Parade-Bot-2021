@@ -28,11 +28,11 @@ public class Drivetrain extends SubsystemBase implements HardwareAdapter {
 
   private void setInverts() {
     leftDriveMaster.setInverted(false);
-    leftDriveSlave.setInverted(false);
+    leftDriveSlave.setInverted(true);
     leftDriveSlave2.setInverted(false);
 
     rightDriveMaster.setInverted(true);
-    rightDriveSlave.setInverted(true);
+    rightDriveSlave.setInverted(false);
     rightDriveSlave2.setInverted(true);
   }
 
