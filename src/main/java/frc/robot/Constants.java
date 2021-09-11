@@ -32,6 +32,9 @@ public interface Constants {
     public static final int SHIFTER_EXT = 0;
     public static final int SHIFTER_RET = 1;
 
+    // CLIMBER
+    public final static int CLIMBER_MASTER = 9;
+
     public final DoubleSolenoid.Value EXT = DoubleSolenoid.Value.kForward;
     public final DoubleSolenoid.Value RET = DoubleSolenoid.Value.kReverse;
     public final DoubleSolenoid.Value OFF = DoubleSolenoid.Value.kOff;
