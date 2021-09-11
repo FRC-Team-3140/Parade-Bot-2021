@@ -7,14 +7,17 @@ package frc.robot;
 import frc.robot.commands.drivetrain.Drive;
 import frc.robot.commands.pneumatics.ShiftDown;
 import frc.robot.commands.pneumatics.ShiftUp;
+import frc.robot.commands.climber.*;
 import frc.robot.subsystems.Drivetrain;
 import frc.robot.subsystems.Pneumatics;
+import frc.robot.subsystems.Climber;
 
 /** Add your docs here. */
 public class RobotContainer implements HardwareAdapter {
 
     public static Drivetrain dt = new Drivetrain();
     public static Pneumatics pn = new Pneumatics();
+    public static Climber cl = new Climber();
 
     public RobotContainer() {
         configDefaultCommands();
@@ -30,6 +33,10 @@ public class RobotContainer implements HardwareAdapter {
     public void configButtons() {
         xbox.leftBumper.whenPressed(new ShiftUp());
         xbox.leftBumper.whenReleased(new ShiftDown());
+        // Climber
+        xbox.dpadUp.whileHeld(new ExtendClimber());
+        xbox.dpadDown.whenHeld(new RetractClimber());
     }
 
+  
 }

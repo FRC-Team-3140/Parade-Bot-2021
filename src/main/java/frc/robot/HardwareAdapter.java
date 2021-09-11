@@ -29,6 +29,8 @@ public interface HardwareAdapter extends Constants {
     public static final WPI_TalonSRX rightDriveSlave = new WPI_TalonSRX(RIGHT_DRIVE_SLAVE);
     public static final WPI_TalonSRX rightDriveSlave2 = new WPI_TalonSRX(RIGHT_DRIVE_SLAVE2);
 
+    // CLIMBER
+    public static final WPI_TalonSRX climberMaster = new WPI_TalonSRX(CLIMBER_MASTER);
 
 
     // PNEUMATICS
