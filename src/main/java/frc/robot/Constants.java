@@ -12,8 +12,8 @@ public interface Constants {
     // XBOX
     public static final int XBOX_PORT = 0;
     public static final double DEADBAND = 0.05;
-    public static final double SPEED_MULTIPLIER = 0.5;
-    public static final double TURN_MULTIPLIER = 0.5;
+    public static final double SPEED_MULTIPLIER_LEFT = 1;
+    public static final double SPEED_MULTIPLIER_RIGHT = 0.5;
 
     // ROBOT
     public static final int PDP = 0;

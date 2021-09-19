@@ -1,18 +1,18 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
+import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
+import frc.robot.auto.*;
 
-/**
- * FUCK YOU ALEX
- */
 public class Robot extends TimedRobot {
-   
+  private Command autoCommand;
   RobotContainer robotContainer;
 
   @Override
   public void robotInit() {
     robotContainer = new RobotContainer();
+    autoCommand = new DriveForward();
   }
 
   @Override
@@ -22,6 +22,9 @@ public class Robot extends TimedRobot {
 
   @Override
   public void autonomousInit() {
+    if (autoCommand != null) {
+      autoCommand.schedule();
+    }
   }
 
   /** This function is called periodically during autonomous. */
@@ -31,7 +34,11 @@ public class Robot extends TimedRobot {
 
   /** This function is called once when teleop is enabled. */
   @Override
-  public void teleopInit() {}
+  public void teleopInit() {
+    if (autoCommand != null) {
+      autoCommand.cancel();
+    }
+  }
 
   /** This function is called periodically during operator control. */
   @Override
