@@ -34,6 +34,9 @@ public interface Constants {
 
     // CLIMBER
     public final static int CLIMBER_MASTER = 9;
+    /**public final static double CLIMBER_MIN_HEIGHT = x 
+    add the value that is the min safe height
+    (Just added for later use) */
 
     public final DoubleSolenoid.Value EXT = DoubleSolenoid.Value.kForward;
     public final DoubleSolenoid.Value RET = DoubleSolenoid.Value.kReverse;
